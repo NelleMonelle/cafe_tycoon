@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="5">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="cafe"/>
+ </properties>
+ <objectgroup id="2" name="objects_bg">
+  <object id="4" name="style_controller" x="0" y="0">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="collision"/>
+ <objectgroup id="4" name="objects_party">
+  <object id="3" name="npc" x="480" y="160">
+   <properties>
+    <property name="actor" value="queen"/>
+    <property name="cutscene" value="cafe.queen"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="markers"/>
+</map>

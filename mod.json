@@ -1,0 +1,20 @@
+{
+    "id": "cafe_tycoon",
+    "name": "Cafe Tycoon",
+    "subtitle": "",
+
+    "version": "v1.0.0",
+    "engineVer": "v0.10.0-dev",
+
+    "chapter": 4,
+
+    "map": "cafe/main",
+
+    "party": ["kris"],
+
+    "hardReset": false,
+
+    "hidden": false,
+
+    "setWindowTitleAndIcon": null
+}
