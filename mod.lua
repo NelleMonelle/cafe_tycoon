@@ -18,6 +18,16 @@ function Mod:postInit(new_file)
         }
         Game:setFlag("unlockedIngredients", unlockedIngredients)
         Game:setFlag("unlockedRecipes", unlockedRecipes)
+
+        if not Game.supplies then
+            Game.supplies = {
+                bread = 10,
+                burger = 10,
+                lettuce = 10,
+                catsup = 10,
+                cheese = 10
+            }
+        end
     end
 end
 
@@ -60,5 +70,30 @@ function Mod:onMapMusic(map, music)
         if Game:getFlag("cafe_style", "castletown") == "castletown" then
             return "castletown"
         end
+    end
+end
+
+function Mod:addSupply(supply, value)
+    if Game.supplies[supply] then
+        Game.supplies[supply] = Game.supplies[supply] + value
+        if Game.supplies[supply] < 0 then
+            Game.supples[supply] = 0
+        end
+    else
+        table.insert(Game.supplies, supply, value)
+        if Game.supplies[supply] < 0 then
+            Game.supples[supply] = 0
+        end
+    end
+end
+
+function Mod:setSupply(supply, value)
+    if value < 0 then
+        value = 0
+    end
+    if Game.supplies[supply] then
+        Game.supplies[supply] = value
+    else
+        table.insert(Game.supplies, supply, value)
     end
 end
